@@ -42,4 +42,4 @@ const books = [
 ] 
 
 const result = getBookByIndex(books, 2);
-console.log(result);
+console.log(result); //name : Before, year : 2018
