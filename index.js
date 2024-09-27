@@ -1,13 +1,3 @@
-function getBookByIndex(books, index) {
-    
-    if (index >= 0 && index < books.length) {
-        const book = books[index];
-        return { name: book.name, year: book.year };
-    } else {
-        return null;
-    }
-}
-
 const books = [
     {
         name: 'After',
@@ -41,5 +31,28 @@ const books = [
     },
 ] 
 
-const result = getBookByIndex(books, 2);
-console.log(result); //name : Before, year : 2018
+
+function getBookByIndex(books, index) {
+    
+    if (index >= 0 && index < books.length) {
+        const book = books[index];
+        return { name: book.name, year: book.year };
+    } else {
+       return null;
+    }
+}
+
+while  (true) {
+    let inputIndex = parseInt(prompt('Enter the index of the book'))
+
+    if (!isNaN(inputIndex)){
+        console.log(getBookByIndex(inputIndex))
+        break
+    } else {
+        console.log('Invalid input. Please enter a number.')
+    }
+}
+
+
+//const result = getBookByIndex(books, 2);
+//console.log(result); //name : Before, year : 2018
